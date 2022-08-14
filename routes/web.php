@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\NavController;
 use App\Http\Controllers\IndexController;
 
 
@@ -23,7 +22,8 @@ Route::get('/', function () {
 });
 
 Route::get('/',[HomeController::class,'home']);
-Route::get('/',[NavController::class,'nav']);
+Route::get('/',[IndexController::class,'nav']);
+Route::get('/',[IndexController::class,'footer']);
 Route::get('index',[IndexController::class,'index'])->name('index');
 Route::get('homee',[IndexController::class,'homee'])->name('homee');
 Route::get('about',[IndexController::class,'about'])->name('about');

@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>template</title>
-    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
-
+    <title>template</title> 
+    @include('files.style')
 </head>
 <body>
-
     <style>
         .img{
             background-image: url(assets/img/man.jpg);
@@ -31,30 +29,8 @@
             height: 700px;
         }
     </style>
-
-    <nav style="background-color:#3f96e8;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" class="navbar navbar-dark ">
-        <a class="navbar-brand" href="{{route('index')}}"><img style="height:50px;width:50px;" src="{{asset('assets/img/images.png')}}" alt="images"></a>
-        <button class="bg-dark navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarsExample01">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="{{route('homee')}}"><b> Home </b></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="{{route('about')}}"><b> About </b></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="{{route('contact')}}"><b> Contact</b></a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="{{route('services')}}"><b> Services </b></a>
-              </li>
-          </ul>
-        </div>
-      </nav>
+    
+    @include('template.nav')
 
       <div class="container-fluid">
         <div class="img">
@@ -71,9 +47,9 @@
             </div>
         </div>
       </div>
-
+            
       <div style="background-color:#3f96e8;" class="container p-5">
-        <div class="row">
+      <div class="row">
             <div  class="col-md-2">
                 <img src="{{asset('assets/img/04.png')}}" alt="04">
             </div>
@@ -89,6 +65,7 @@
                 <h4 class="mt-3" style="color: white;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b> CARE PROGRAMS </b></h4>
                 <p style="margin-top: 20px; color: white;font-size: 13px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Duis aute irure dolor in reprehenderit in <br> voluptate velit esse cillum dolore eu fugiat nulla <br> pariatur. Excepteur sint occaecat cupidatat non <br> proident, sunt</p>
             </div>
+        </div>
         </div>
       </div>
       <div style="margin-top: 100px;" class="container">
@@ -385,22 +362,13 @@
             </div>
           </div>
                 
-          <div style="height: 300px;" class="container-fluid bg-dark">
-            <div class="container">
-                <div class="row">
-                    <div style="margin-top:100px;" class="col-md-12">
-                        <div class="text-center">
-                            <p style="color: white;"><b>    Sample text. Click to select the text box. Click again or double <br> click to start editing the text. </b></p>
-                            <a href="#">Website Templates</a>Created With<a href="#">Website Builder Software.</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </div>
+    @include('template.footer')
 
+      
     
 
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.bundle.js"></script>
+    @include('files.script')
+
+
 </body>
 </html>
