@@ -1,2 +1,2 @@
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.bundle.js"></script>
+<script str="{{asset('assets/js/bootstrap.bundle.min')}}" ></script>
+<script str="{{asset('assets/js/jquery.js')}}" ></script>
