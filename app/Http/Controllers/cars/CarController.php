@@ -8,6 +8,6 @@ use Illuminate\Http\Request;
 class CarController extends Controller
 {
     public function Car(){
-        return view('machine.car');
+        return view('users.car');
     }
 }

@@ -1,4 +1,4 @@
-@extends('files.scaffold')
+@extends('layout.scaffold')
 
 
 <div class="container mt-5">
