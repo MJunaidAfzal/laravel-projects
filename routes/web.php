@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\cars\CarController;
+use App\Http\Controllers\FactoryController;
+
 
 
 
@@ -35,6 +37,8 @@ Route::get('about',[IndexController::class,'about'])->name('about');
 Route::get('services',[IndexController::class,'services'])->name('services');
 Route::get('contact',[IndexController::class,'contact'])->name('contact');
 Route::get('/',[CarController::class,'car']);
+//factory route
+Route::get('factories',[FactoryController::class,'index'])->name('factories.index');
 
 
 

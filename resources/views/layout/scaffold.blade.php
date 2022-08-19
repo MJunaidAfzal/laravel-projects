@@ -8,7 +8,10 @@
     @include('include.style')
 </head>
 <body>
+    <div class="container-fluid">
+   @include('include.nav')
     @yield('content')
+    </div>
     @include('include.script')
 </body>
 </html>
