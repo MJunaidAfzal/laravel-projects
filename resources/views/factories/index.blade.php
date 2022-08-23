@@ -30,7 +30,7 @@
         </div>
         @endif
       </div>
-
+<div class="container">
 <table class="table table-striped table-hover table-bordered">
   <thead  class="bg-dark text-light">
     <tr>
@@ -74,6 +74,7 @@
   
   </tbody>
 </table>
+</div>
 </div>
 
 @endsection

@@ -50,10 +50,10 @@ class FactoryController extends Controller
 
     public function update(Request $request, $id){
         $request->validate([
-            'name' => 'required|max:191|unique:factories,name'.$id,
-            'price' => 'required|unique:factories,price'.$id,
-            'year' => 'required|unique:factories,year'.$id,
-            'speed' => 'required|unique:factories,speed'.$id,
+            'name' => 'required|max:191|unique:factories,name' ,
+            'price' => 'required|unique:factories,price' ,
+            'year' => 'required|unique:factories,year' ,
+            'speed' => 'required|unique:factories,speed' ,
             'status' => 'required'
         ]);
 
