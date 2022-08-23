@@ -37,24 +37,24 @@
                         <div class="row">
                             <div class="col-md-6">
                             <label for=""><b>Name</b></label>
-                             <input style="border: groove 2px gold;" type="text" name="name" id="" class="p-4 form-control" value="{{old('name')}}">
+                             <input style="border: groove 2px gold;" type="text" name="name" id="" class="p-4 form-control" value="{{$factory->name}}">
                             <small class="text-danger">@error('name')  {{$message}} @enderror</small>
                             </div>
                             <div class="col-md-6">
                             <label for=""><b>Price</b></label>
-                             <input style="border: groove 2px gold;" type="text" name="price" id="" class="p-4 form-control" value="{{old('price')}}" >
+                             <input style="border: groove 2px gold;" type="text" name="price" id="" class="p-4 form-control" value="{{$factory->price}}" >
                             <small class="text-danger">@error('price')  {{$message}} @enderror</small>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 mt-3">
                             <label for=""><b>Year</b></label>
-                             <input style="border: groove 2px gold;" type="number" name="year" id="" class="p-4 form-control" value="{{old('year')}}" >
+                             <input style="border: groove 2px gold;" type="number" name="year" id="" class="p-4 form-control" value="{{$factory->year}}" >
                             <small class="text-danger">@error('year')  {{$message}} @enderror</small>
                             </div>
                             <div class="col-md-6 mt-3">
                             <label for=""><b>Speed</b></label>
-                             <input style="border: groove 2px gold;" type="number" name="speed" id="" class="p-4 form-control" value="{{old('speed')}}" >
+                             <input style="border: groove 2px gold;" type="number" name="speed" id="" class="p-4 form-control" value="{{$factory->speed}}" >
                             <small class="text-danger">@error('speed')  {{$message}} @enderror</small>
 
                             </div>
@@ -62,8 +62,8 @@
                         <label for=""><b>Status</b></label>
                             <select class="form-control " style="border: groove 2px gold;" name="status" id="" >
                                 <option value="" >Please Select</option>
-                                <option value="1" @if(old("range") == 1) selected @endif>Active</option>
-                                <option value="0" @if(old("range") == 0) selected @endif>Deactive</option>
+                                <option value="1" @if(old("status",$factory->status) == 1) selected @endif>Active</option>
+                                <option value="0" @if(old("status",$factory->status) == 0) selected @endif>Deactive</option>
                             </select>
                             <small class="text-danger">@error('status')  {{$message}} @enderror</small>
                             </div>
