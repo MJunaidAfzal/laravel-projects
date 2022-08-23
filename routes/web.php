@@ -13,6 +13,8 @@ use App\Http\Controllers\FactoryController;
 
 
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,6 +41,16 @@ Route::get('contact',[IndexController::class,'contact'])->name('contact');
 Route::get('/',[CarController::class,'car']);
 //factory route
 Route::get('factories',[FactoryController::class,'index'])->name('factories.index');
+Route::get('factories/create', [FactoryController::class, 'create'])->name('factories.create');
+Route::post('factories/store', [FactoryController::class, 'store'])->name('factories.store');
+Route::get('factories/{id}/edit', [FactoryController::class, 'edit'])->name('factories.edit');
+Route::post('factories/{id}/update', [FactoryController::class, 'update'])->name('factories.update');
+Route::get('factories/{id}/delete', [FactoryController::class, 'delete'])->name('factories.delete');
+
+
+
+
+
 
 
 
